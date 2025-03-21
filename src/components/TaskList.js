@@ -10,6 +10,7 @@ function TaskList() {
             .then((data) => setTasks(data))
             .catch((error) => console.error("Error fetching tasks:", error));
     };
+    setInterval(fetchTasks, 2000); // Refresh task list every 2 seconds
 
     useEffect(() => {
         fetchTasks();
